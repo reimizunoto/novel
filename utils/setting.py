@@ -40,3 +40,8 @@ class TaduSetting(setting):
     def __init__(self):
         self.headers = settings.TADU_HEADERS
         self.cookies = settings.TADU_COOKIES
+        
+class Xs33Setting(setting):
+    def __init__(self):
+        self.headers = settings.XS33_HEADERS
+        self.cookies = settings.XS33_COOKIES
