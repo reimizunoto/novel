@@ -1,6 +1,6 @@
-from src import bigee, dushuge
+from src import bigee, tadu
 
 if __name__ == '__main__':
     novel_name = input("Enter the name of the novel: ")
-    novel = bigee.Bigee(novel_name)
+    novel = tadu.Tadu(novel_name)
     novel.download()

@@ -35,3 +35,8 @@ class BigeeSetting(setting):
     def __init__(self):
         self.headers = settings.BIGEE_HEADERS
         self.cookies = settings.BIGEE_COOKIES
+        
+class TaduSetting(setting):
+    def __init__(self):
+        self.headers = settings.TADU_HEADERS
+        self.cookies = settings.TADU_COOKIES
