@@ -7,16 +7,18 @@ class setting:
         self.headers = {}
         self.cookies = {}
 
-    def set_headers(self, headers):
-        self.headers = headers
+    def set_headers(self, headers: dict):
+        for key, value in headers.items():
+            self.headers[key] = value
 
-    def set_cookies(self, cookies):
-        self.cookies = cookies
+    def set_cookies(self, cookies: dict):
+        for key, value in cookies.items():
+            self.cookies[key] = value
     
-    def get_headers(self):
+    def get_headers(self: dict):
         return self.headers
 
-    def get_cookies(self):
+    def get_cookies(self: dict):
         return self.cookies
 
 class QidianSetting(setting):
@@ -28,3 +30,8 @@ class DushugeSetting(setting):
     def __init__(self):
         self.headers = settings.DUSHUGE_HEADERS
         self.cookies = settings.DUSHUGE_COOKIES
+
+class BigeeSetting(setting):
+    def __init__(self):
+        self.headers = settings.BIGEE_HEADERS
+        self.cookies = settings.BIGEE_COOKIES
